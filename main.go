@@ -149,9 +149,8 @@ func main() {
 		os.Exit(1)
 	}
 	log.Println("Source port:", sourcePort)
-	if flag.Lookup("u") != nil {
+	if isUdp {
 		log.Println("Protocol:", "udp")
-		isUdp = true
 	} else {
 		log.Println("Protocol:", "tcp")
 	}
